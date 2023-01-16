@@ -79,6 +79,22 @@
 //Робити перевірку,що користувач ввів саме число,
 //а не довільний набір символів не потрібно.
 
+// let total = 0;
+
+// let numberInput = prompt("введіть число");
+
+// // while (numberInput) {
+
+// //     total += Number(numberInput);
+// //     numberInput = prompt("введіть число");
+// // }
+// do {
+//     total += Number(numberInput);
+//     numberInput = prompt("введіть число");
+// } while (numberInput);
+
+// console.log(Загальна сума введених чисел дорівнює ${total}.)
+
 // Напишіть цикл, який пропонує ввести
 //число більше 100 через prompt.
 //Якщо відвідувач ввів інше число - попросити
