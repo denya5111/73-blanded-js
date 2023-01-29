@@ -173,3 +173,49 @@
 //елемента масиву виводитиме повідомлення у форматі
 //<номер елемента> - <значення елемента>
 //Нумерація елементів має починатися з першого.
+
+//Напишіть код для пошуку пароля в масиві
+//Через включення і тернарний оператор
+// const passwords = ['ajax123', 'polly456', 'mango789', 'semiBold'];
+// const password = 'semiBold';
+
+
+// const answer = passwords.includes(password) ? `Пароль ${password} знайдено` : `Пароль ${password} не знайдено`;
+// console.log(answer);
+
+//Напишіть скрипт, який замінює реєстрацію кожного символу
+//в стороке на противоположный
+//Например 'JavaScript' повинен вернути 'jAVAsCRIPT'
+
+// let fraze = "JavaScript";
+
+// fraze = fraze.split("")
+// let string = [];
+// for (let letter of fraze) {
+//     if (letter === letter.toLowerCase()) {
+//         string.push(letter.toLocaleUpperCase());
+//     } else {
+//         string.push(letter.toLowerCase())
+//     }
+// }
+// console.log(string.join(""));
+
+//Написать функцию, которая разобьет документ на массив
+//по 2 буквы, если у последней буквы нет пары, то
+//должна удерживаться 1 буква.
+//Дана строка 'abc' - вернет ['ab', 'c']
+// *если у последней буквы нет пары, вернет _
+// строка 'abc' - вернет ['ab', 'c_']
+
+// let stringLetters = "Привіт Україно!";
+// stringLetters = stringLetters.split("");
+// const string2Letters = [];
+// for (let i = 0; i < stringLetters.length; i += 2) {
+
+//     string2Letters.push(stringLetters[i] + (stringLetters[i + 1] ?? "_"))
+
+// }
+
+// console.log(string2Letters);
+
+
