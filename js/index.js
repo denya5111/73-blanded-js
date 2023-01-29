@@ -103,6 +103,112 @@
 //введе число більше 100, або натисне кнопку
 //Скасування в prompt
 
+// let numberInput = prompt('Введіть число більше 100');
+
+// while (numberInput < 100) {
+//   numberInput = prompt('Введіть число більше 100');
+// }
+// console.log(numberInput);
+
+//  У змінній min лежить число від 0 до 59.
+// Визначте, в яку чверть години потрапляє
+// це число(у першу, другу, третю чи четверту).
+//var min = 10;
+
+// const min = 15;
+
+// if (min >= 0 && min <= 15) {
+//   console.log('Це число потрапляє у першу чверть');
+// } else if (min >= 15 && min <= 29) {
+//   console.log('Це число потрапляє у другу чверть');
+// } else if (min >= 30 && min <= 44) {
+//   console.log('Це число потрапляє у третю чверть');
+// } else if (min >= 45 && min <= 59) {
+//   console.log('Це число потрапляє у четверту чверть');
+// }
+
+// if (min <= 15) {
+//   console.log('Це число потрапляє у першу чверть');
+// } else if (min <= 29) {
+//   console.log('Це число потрапляє у другу чверть');
+// } else if (min <= 44) {
+//   console.log('Це число потрапляє у третю чверть');
+// } else if (min <= 59) {
+//   console.log('Це число потрапляє у четверту чверть');
+// }
+
+// switch (min) {
+//   case min >= 0 && min <= 15 && min:
+//     console.log('Це число потрапляє у першу чверть');
+//     break;
+//   case min >= 15 && min <= 29 && min:
+//     console.log('Це число потрапляє у другу чверть');
+//     break;
+//   case min >= 30 && min <= 44 && min:
+//     console.log('Це число потрапляє у третю чверть');
+//     break;
+//   case min >= 45 && min <= 59 && min:
+//     console.log('Це число потрапляє у четверту чверть');
+//     break;
+//   default:
+//     console.log('Ви не потрапили в діапазон годин');
+//     break;
+// }
+
+//Дано рядок, що складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є буква 'a'.
+// Якщо це так - виведіть 'так', інакше виведіть 'ні'.
+
+// const string = 'abcde';
+
+// if (string[0] === 'a') {
+//   console.log('так');
+// } else {
+//   console.log('ні');
+// }
+
+// if (string.startsWith('a')) {
+//   console.log('так');
+// } else {
+//   console.log('ні');
+// }
+
+// console.log(string.startsWith('a') ? 'так' : 'ні');
+
+//Якщо  число ділитися на 3 повертати
+//fizz якщо ділитися на 5 повертати buzz
+//Елсі ділитися на 3 і на 5 повернути fizzbuzz
+
+// const number = 20;
+// for (let i = 1; i <= number; i += 1) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('fizzbuzz');
+//   } else if (i % 3 === 0) {
+//     console.log('fizz');
+//   } else if (i % 5 === 0) {
+//     console.log('buzz');
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+//1. Використовує функцію if... else,
+//напишіть код, який буде запитаний:
+//"Яке офіційне ім'я JavaScript?"
+//Якщо користувач вводить "ECMAScript",
+//то показати через сповіщення: "Вірно!"
+//у протилежному випадку показати:"Не знаєте? ECMAScript!"
+
+// const string = prompt("Яке офіційне ім'я JavaScript?");
+
+// if (string === 'ECMAScript') {
+//   console.log('Вірно');
+// } else {
+//   console.log('Не знаєте? ECMAScript!');
+// }
+
+// console.log(string === 'ECMAScript' ? 'Вірно' : 'Не знаєте? ECMAScript!');
+
 // let numberInput = prompt("введіть число  більше 100");
 
 // do {
@@ -158,7 +264,6 @@
 // console.log(fn("с", 5));
 // console.log(fn(12, "р"));
 
-
 // const logItems = function (array) {
 
 //     for (let i = 0; i < array.length; i += 1) {
@@ -173,6 +278,7 @@
 //елемента масиву виводитиме повідомлення у форматі
 //<номер елемента> - <значення елемента>
 //Нумерація елементів має починатися з першого.
+
 
 //Напишіть код для пошуку пароля в масиві
 //Через включення і тернарний оператор
@@ -218,4 +324,70 @@
 
 // console.log(string2Letters);
 
+
+
+//Напиши функцію findSmallerNumber(numbers)
+//яка шукає найменше в масиві
+//Додай перевірку що функція отримує масив
+
+// function findSmallerNumber(numbers) {
+//   //   return Math.min(...numbers);
+//   let minNum = numbers[0];
+//   for (let number of numbers) {
+//     minNum = number < minNum ? number : minNum;
+//   }
+
+//   // if (number < minNum) {
+//   //   minNum = number;
+//   // }
+
+//   return minNum;
+// }
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// console.log(findSmallerNumber(numbers));
+
+//Напишіть функцію caculculateAverage()
+//яка приймає довільну кількість
+//Аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+// function caculculateAverage(...args) {
+//   let total = 0;
+//   let index = 0;
+
+//   for (let arg of args) {
+//     if (typeof arg !== 'number') {
+//       continue;
+//     }
+
+//     total += arg;
+//     index += 1;
+//   }
+//   console.log(total / index);
+// }
+
+// caculculateAverage(2, 5, 35, 56, 'f', 12, 24, 7, 't', 80, 3);
+
+//Напишіть функцію findTheColor()
+//яка приймає назву кольору
+//визначає його наявність у масиві
+//якщо колір є, встановлює його як фон документа
+//якщо кольору немає виводить console.error('Такий колір не знайдено');
+//і встановлює колір документа червоний
+// document.body.style.background = 'red';
+//const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon']
+
+// function findTheColor(color, colors) {
+//   document.body.style.background = 'red';
+//   if (colors.includes(color)) {
+//     document.body.style.background = color;
+//   } else {
+//     console.error('Такий колір не знайдено');
+//   }
+// }
+
+// const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon'];
+
+// findTheColor('yellow', colors);
 
