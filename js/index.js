@@ -279,12 +279,10 @@
 //<номер елемента> - <значення елемента>
 //Нумерація елементів має починатися з першого.
 
-
 //Напишіть код для пошуку пароля в масиві
 //Через включення і тернарний оператор
 // const passwords = ['ajax123', 'polly456', 'mango789', 'semiBold'];
 // const password = 'semiBold';
-
 
 // const answer = passwords.includes(password) ? `Пароль ${password} знайдено` : `Пароль ${password} не знайдено`;
 // console.log(answer);
@@ -323,8 +321,6 @@
 // }
 
 // console.log(string2Letters);
-
-
 
 //Напиши функцію findSmallerNumber(numbers)
 //яка шукає найменше в масиві
@@ -391,3 +387,38 @@
 
 // findTheColor('yellow', colors);
 
+//Створіть функцію multiplyNumeric(obj),
+//яка множить всі числові властивості об'єкта obj на 2.
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu',
+// };
+
+// function multiplyNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === 'number') {
+//       obj[key] *= 2;
+//     }
+//   }
+//   console.log(obj);
+// }
+
+// multiplyNumeric(menu);
+
+// Уже ребра татар бережу
+// Де помити мопед
+
+// const string = 'Уже ребра татар бережу';
+// const string2 = 'Де помити мопед';
+
+// function checkString(string) {
+//   const normalizeString = string.toLowerCase().replaceAll(' ', '');
+//   const reverseString = normalizeString.split('').reverse().join('');
+
+//   return normalizeString === reverseString;
+// }
+
+// console.log(checkString(string));
+// console.log(checkString(string2));
