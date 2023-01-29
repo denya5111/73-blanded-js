@@ -103,13 +103,73 @@
 //введе число більше 100, або натисне кнопку
 //Скасування в prompt
 
-let numberInput = prompt("введіть число  більше 100");
+// let numberInput = prompt("введіть число  більше 100");
 
-do {
-    console.log(numberInput)
-} while (numberInput <= 100);
-// while (numberInput <= 100) {
-//     numberInput = prompt("введіть число повторно більше 100");
+// do {
+//     console.log(numberInput)
+// } while (numberInput <= 100);
+// // while (numberInput <= 100) {
+// //     numberInput = prompt("введіть число повторно більше 100");
+// // }
+
+// console.log(numberInput)
+
+// Створіть масив styles з елементами «Джаз» та «Блюз».
+// let styles = ["Jaz", "Bluz"];
+// // styles.push("Roc-n-Roll");
+// // styles.splice(styles.length, 0, "Roc-n-Roll")
+// // styles = [...styles, "Roc-n-Roll"]
+// styles[styles.length] = "Roc-n-Roll"
+
+// // styles.splice(1, 1, "Classic");
+// const index = styles.indexOf("Bluz")
+// // styles.splice(index, 1, "Classic");
+// styles[index] = 'Classic';
+
+// const dleArie = styles.splice(0, 1);
+
+// // console.log(dleArie[0]);
+
+// // styles.unshift("Rap", "Reggy");
+// // styles.splice(0, 0, "Rap", "Reggy");
+// styles = ["Rap", "Reggy", ...styles]
+// console.log(styles);
+
+//Додайте "Рок-н-рол" в кінець.
+// Замініть значення "Блюз" на "Класика".
+//Видалить перший елемент масиву і виведіть його в консоль.
+//Вставте «Реп» і «Реггі» на початок масиву.
+
+//Напишіть функцію min(a, b), яка повертає
+//менше з чисел a, b
+//Потрібно додати перевірку, що функція отримує числа
+
+// const fn = function (a, b) {
+//     return Math.min(a, b);
+// }
+// const fn = function (a, b) {
+//     if (typeof a !== "number" || typeof b !== "number") {
+//         return "один з параметрів - не число"
+//     }
+//     return a < b ? a : b;
 // }
 
-console.log(numberInput)
+// console.log(fn(12, 5));
+// console.log(fn("с", 5));
+// console.log(fn(12, "р"));
+
+
+// const logItems = function (array) {
+
+//     for (let i = 0; i < array.length; i += 1) {
+
+//         console.log(`${i + 1} = ${array[i]}`);
+//     }
+// }
+// logItems(styles);
+
+//Напишіть функцію logItems(array), яка приймає
+//масив та використовує цикл for, який для кожного
+//елемента масиву виводитиме повідомлення у форматі
+//<номер елемента> - <значення елемента>
+//Нумерація елементів має починатися з першого.
