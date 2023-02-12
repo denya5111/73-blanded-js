@@ -483,18 +483,18 @@
 //Реалізувати фільтр за властивістю price  та отримати
 //только назву моделі
 
-// const vehicles = [
-//   { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
-//   { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
-//   { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
-//   { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
-//   { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
-//   { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
-//   { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
-//   { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
-//   { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
-//   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
-// ];
+const vehicles = [
+    { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+    { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+    { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+    { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+    { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+    { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+    { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+    { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+    { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+    { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+];
 
 // const newArray = vehicles.filter(car => car.price > 30000).map(car => car.model);
 
@@ -546,3 +546,51 @@
 // const newTemp = celsius.reduce((acc, num) => [...acc, num * 1.8 + 32], []);
 
 // console.log(newTemp);
+
+//Потрібно перевірити "same" масиви
+// числа з першого в квадраті дорівнюють числам другого
+// const a = [121, 144, 19, 161, 19, 144, 19, 11];
+// const b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
+
+// const s = a.map(number => Math.pow(number, 2)).sort((a, b) => a - b);
+// console.log(s);
+// const sUp = b.sort((a, b) => a - b).every((element, index) => element === s[index]);
+// console.log(sUp);
+
+// Зібрати однакові елементи в двох масивах в один
+// за допомогою forEach
+// const numbers = [1, 2, 3, 4, 5];
+// const numbers2 = [5, 6, 3];
+// const newArr = [];
+// const upnum = numbers.forEach(element => {
+//     if (numbers2.includes(element)) {
+//         newArr.push(element);
+//     }
+// });
+// console.log(newArr);
+// const upnum = numbers.reduce((acc, number) => numbers2.includes(number)? [...acc, number]: acc,[])
+// console.log(upnum);
+
+/*
+? Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із зміненим значенням властивості price
+? залежно від переданої знижки.
+*/
+// function makeCarsWithDiscount (newDiscount) {
+    
+//    return vehicles.map(car => ({...car, price: car.price * ((100 - newDiscount)/100)}));
+// }
+// // const saleFruits = fruits.map(fruit => ({ ...fruit, price: fruit.price * 0.8, id: Date.now()}))
+// // console.log(saleFruits);
+// console.log(makeCarsWithDiscount (30));
+
+/*
+?Нехай функція getCarsWithType повертає масив автомобілів, тип яких
+? збігається із значенням параметра type.
+*/
+// const allSedans = getCarsWithType(cars, 'sedan');
+// function getCarsWithType (cars, type) {
+// return cars.filter(car => car.type === type);
+// }
+
+// console.log(getCarsWithType(vehicles, 'suv'));
+
