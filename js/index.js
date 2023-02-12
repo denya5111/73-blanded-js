@@ -615,99 +615,101 @@ const vehicles = [
 
 // console.log(each(numbers, add));
 
-const people = [
-  {
-    name: 'Alex',
-    know: ['Alex', 'Jhon'],
-  },
-  {
-    name: 'Jhon',
-    know: [],
-  },
-  {
-    name: 'Eva',
-    know: ['Alex', 'Jhon'],
-  },
-  {
-    name: 'Ivan',
-    know: ['Jhon', 'Eva'],
-  },
-];
-//нарцис  'Jhon'
-const people1 = [
-  {
-    name: 'Alex',
-    know: ['Alex', 'Jhon'],
-  },
-  {
-    name: 'Jhon',
-    know: [],
-  },
-  {
-    name: 'Eva',
-    know: [],
-  },
-  {
-    name: 'Ivan',
-    know: ['Jhon', 'Eva'],
-  },
-];
-//немає нарциса'
-const people3 = [
-  {
-    name: 'Alex',
-    know: ['Alex', 'Eva'],
-  },
-  {
-    name: 'Jhon',
-    know: [],
-  },
-  {
-    name: 'Eva',
-    know: ['Alex', 'Jhon'],
-  },
-  {
-    name: 'Ivan',
-    know: ['Jhon', 'Eva'],
-  },
-];
-//немає нарциса
-const people4 = [
-  {
-    name: 'Alex',
-    know: ['Alex', 'Jhon'],
-  },
-  {
-    name: 'Jhon',
-    know: ['Eva'],
-  },
-  {
-    name: 'Eva',
-    know: ['Alex', 'Jhon'],
-  },
-  {
-    name: 'Ivan',
-    know: ['Jhon', 'Eva'],
-  },
-];
-//немає нарциса'
-// Нарциса знають всі, нарцис незнає нікого
+// const people = [
+//   {
+//     name: 'Alex',
+//     know: ['Alex', 'Jhon'],
+//   },
+//   {
+//     name: 'Jhon',
+//     know: [],
+//   },
+//   {
+//     name: 'Eva',
+//     know: ['Alex', 'Jhon'],
+//   },
+//   {
+//     name: 'Ivan',
+//     know: ['Jhon', 'Eva'],
+//   },
+// ];
+// //нарцис  'Jhon'
+// const people1 = [
+//   {
+//     name: 'Alex',
+//     know: ['Alex', 'Jhon'],
+//   },
+//   {
+//     name: 'Jhon',
+//     know: [],
+//   },
+//   {
+//     name: 'Eva',
+//     know: [],
+//   },
+//   {
+//     name: 'Ivan',
+//     know: ['Jhon', 'Eva'],
+//   },
+// ];
+// //немає нарциса'
+// const people3 = [
+//   {
+//     name: 'Alex',
+//     know: ['Alex', 'Eva'],
+//   },
+//   {
+//     name: 'Jhon',
+//     know: [],
+//   },
+//   {
+//     name: 'Eva',
+//     know: ['Alex', 'Jhon'],
+//   },
+//   {
+//     name: 'Ivan',
+//     know: ['Jhon', 'Eva'],
+//   },
+// ];
+// //немає нарциса
+// const people4 = [
+//   {
+//     name: 'Alex',
+//     know: ['Alex', 'Jhon'],
+//   },
+//   {
+//     name: 'Jhon',
+//     know: ['Eva'],
+//   },
+//   {
+//     name: 'Eva',
+//     know: ['Alex', 'Jhon'],
+//   },
+//   {
+//     name: 'Ivan',
+//     know: ['Jhon', 'Eva'],
+//   },
+// ];
+// //немає нарциса'
+// // Нарциса знають всі, нарцис незнає нікого
 
-function findNarcys(array) {
-  //   console.log(array.find(people => people.know.length === 0));
+// function findNarcys(array) {
+//   let total = 0;
+//   let name = '';
+//   for (const people of array) {
+//     if (people.know.length === 0) {
+//       name = people.name;
+//     }
+//   }
+//   for (const people of array) {
+//     if (people.know.includes(name)) {
+//       total += 1;
+//     }
+//   }
+//   return total === array.length - 1 ? `нарцис ${name}` : `немає нарциса`;
+// }
 
-  if (array.find(people => people.know.length === 0)) {
-    const findName = array.find(people => people.know.length === 0).name;
-    // console.log(findName);
-    if (array.filter(people => people.name.includes(findName))) {
-      return `${findName} - нарцисс`;
-    }
-    return 'немає нарциса';
-  }
-  return "'немає нарциса";
-}
-
-console.log(findNarcys(people));
-console.log(findNarcys(people1));
-console.log(findNarcys(people3));
-console.log(findNarcys(people4));
+// console.log(findNarcys(people));
+// console.log(findNarcys(people1));
+// console.log(findNarcys(people3));
+// console.log(findNarcys(people4));
