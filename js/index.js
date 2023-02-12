@@ -484,16 +484,16 @@
 //только назву моделі
 
 const vehicles = [
-    { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
-    { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
-    { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
-    { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
-    { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
-    { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
-    { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
-    { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
-    { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
-    { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+  { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+  { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+  { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+  { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+  { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+  { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+  { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+  { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+  { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+  { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
 ];
 
 // const newArray = vehicles.filter(car => car.price > 30000).map(car => car.model);
@@ -576,7 +576,7 @@ const vehicles = [
 ? залежно від переданої знижки.
 */
 // function makeCarsWithDiscount (newDiscount) {
-    
+
 //    return vehicles.map(car => ({...car, price: car.price * ((100 - newDiscount)/100)}));
 // }
 // // const saleFruits = fruits.map(fruit => ({ ...fruit, price: fruit.price * 0.8, id: Date.now()}))
@@ -594,3 +594,120 @@ const vehicles = [
 
 // console.log(getCarsWithType(vehicles, 'suv'));
 
+/*
+? Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву.
+? Функція each повинна повернути новий масив, елементами якого будуть результати виклику колбека.
+*/
+// const numbers = [1, 3, 4, 5];
+
+// function each(array, callback) {
+//   const newArray = [];
+//   for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+//     newArray.push(callback(element));
+//   }
+//   return newArray;
+// }
+
+// function add(num) {
+//   return num + 21;
+// }
+
+// console.log(each(numbers, add));
+
+const people = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//нарцис  'Jhon'
+const people1 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: [],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса'
+const people3 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса
+const people4 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: ['Eva'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса'
+// Нарциса знають всі, нарцис незнає нікого
+
+function findNarcys(array) {
+  //   console.log(array.find(people => people.know.length === 0));
+
+  if (array.find(people => people.know.length === 0)) {
+    const findName = array.find(people => people.know.length === 0).name;
+    // console.log(findName);
+    if (array.filter(people => people.name.includes(findName))) {
+      return `${findName} - нарцисс`;
+    }
+    return 'немає нарциса';
+  }
+  return "'немає нарциса";
+}
+
+console.log(findNarcys(people));
+console.log(findNarcys(people1));
+console.log(findNarcys(people3));
+console.log(findNarcys(people4));
