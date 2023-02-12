@@ -422,3 +422,60 @@
 
 // console.log(checkString(string));
 // console.log(checkString(string2));
+
+// const courses = [
+//     {
+//         name: 'Basic HTML+CSS',
+//         topics: ['VSCode', 'HTML', 'CSS', 'GitHub', 'GitHub Desctop'],
+//     },
+//     {
+//         name: 'Intermediate HTML+CSS',
+//         topics: ['VSCode', 'HTML', 'CSS', 'GitHub', 'Git', 'Terminal'],
+//     },
+//     {
+//         name: 'Basic JavaScript',
+//         topics: [
+//             'VSCode',
+//             'Type system',
+//             'Loops',
+//             'Function',
+//             'Git',
+//             'Conditions',
+//             'Classes',
+//             'GitHub',
+//             'DOM',
+//         ],
+//     },
+//     {
+//         name: 'Intermediate JavaScript',
+//         topics: ['VSCode', 'NPM', 'Bundlers', 'Transpiling', 'Git', 'Promises', 'AJAX', 'GitHub'],
+//     },
+// ];
+
+//6. Зібрати в allTopics масив всіх предметів всіх курсів
+//Виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи
+
+// const allToppics = courses.flatMap(topic => topic.topics).filter((topic, index, arr) => arr.indexOf(topic) === index);
+// console.log(allToppics);
+// const allToppics = courses.reduce((acc, topic) => [...acc, ...topic.topics], []).reduce((acc, el) => {
+//     if (!acc.includes(el)) {
+//         acc.push(el);
+//     }
+//     return acc;
+// }, []);
+// console.log(allToppics);
+
+// const allToppics = courses.reduce((acc, topic) => [...acc, ...topic.topics], []).reduce((acc, el) => acc.includes(el)? acc: [...acc, el], []);
+// console.log(allToppics);
+
+//7. Призначити знижку 20% на фрукти в масиві,
+//Присвоїти ID для кожного продукту
+
+// const fruits = [
+//     { name: 'apple', price: 200 },
+//     { name: 'orange', price: 300 },
+//     { name: 'grapes', price: 750 },
+// ];
+
+// const saleFruits = fruits.map(fruit => ({ ...fruit, price: fruit.price * 0.8, id: Date.now()}))
+// console.log(saleFruits);
