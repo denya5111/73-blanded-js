@@ -518,3 +518,31 @@
 // console.log(isEqualSymbols('кот', 'ток'));
 // console.log(isEqualSymbols('кот', 'тик'));
 
+// Дізнатись загальні роки практики в об'єкті workers
+
+// const workers = [
+//   { id: 10, name: 'Mango', years: 14 },
+//   { id: 2, name: 'Poly', years: 19 },
+//   { id: 41, name: 'Ajax', years: 30 },
+//   { id: 99, name: 'Kiwi', years: 22 },
+// ];
+
+// const total = workers.reduce((acc, worker) => (acc += worker.years), 0);
+// console.log(total);
+
+//Даний масив із числами. Залишіть у ньому лише позитивні числа.
+// Потім витягніть квадратний корінь і цих чисел.
+// const array = [121, -2, 225, 0, 4, -5, 36, -11];
+
+// const newArray = array.filter(num => num > 0).map(num => Math.sqrt(num));
+// console.log(newArray);
+
+// Створення масиву значень Фаренгейта із масиву значень Цельсія
+// let celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
+// // t * 1.8 + 32;
+
+// // const newTemp = celsius.map(num => num * 1.8 + 32);
+
+// const newTemp = celsius.reduce((acc, num) => [...acc, num * 1.8 + 32], []);
+
+// console.log(newTemp);
