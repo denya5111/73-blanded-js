@@ -422,3 +422,41 @@
 
 // console.log(checkString(string));
 // console.log(checkString(string2));
+
+//Реалізувати фільтр за властивістю price  та отримати
+//только назву моделі
+
+// const vehicles = [
+//   { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+//   { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+//   { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+//   { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+//   { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+//   { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+//   { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+//   { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+//   { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+//   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+// ];
+
+// const newArray = vehicles.filter(car => car.price > 30000).map(car => car.model);
+
+// //Отримати машини на розпродажі і сортувати за зменшенням ціни
+
+// const onSaleCar = vehicles.filter(car => car.onSale).sort((a, b) => b.price - a.price);
+// console.table(onSaleCar);
+
+//3. Необхідно написати функцію (isEqualSymbols), яка приймає
+//в аргументах два рядки і повертає true, якщо ці рядки
+//складаються з ідентичних літер і false інакше.
+//isEqualSymbols('кот', 'ток'); // виведе true
+//isEqualSymbols('кот', 'тик') // виведе false
+
+// function isEqualSymbols(str1, str2) {
+//   const array1 = str1.split('');
+//   const array2 = str2.split('');
+//   return array1.every(a => array2.includes(a));
+// }
+
+// console.log(isEqualSymbols('кот', 'ток'));
+// console.log(isEqualSymbols('кот', 'тик'));
