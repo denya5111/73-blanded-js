@@ -483,18 +483,18 @@
 //Реалізувати фільтр за властивістю price  та отримати
 //только назву моделі
 
-const vehicles = [
-  { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
-  { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
-  { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
-  { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
-  { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
-  { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
-  { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
-  { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
-  { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
-  { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
-];
+// const vehicles = [
+//   { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+//   { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+//   { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+//   { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+//   { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+//   { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+//   { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+//   { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+//   { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+//   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+// ];
 
 // const newArray = vehicles.filter(car => car.price > 30000).map(car => car.model);
 
@@ -713,3 +713,35 @@ const vehicles = [
 // console.log(findNarcys(people1));
 // console.log(findNarcys(people3));
 // console.log(findNarcys(people4));
+
+//Створити маркований список.
+//Створити кнопки "Add" "Remove", які змінюватимуть склад списку
+//Створити input з якого будемо отримувати значення, яке буде в li
+//* Парним li вказати червоне тло, непарним - синім
+//Для виконання завдання використовуйте createElement
+
+// const markList = document.createElement('ol');
+// const inputList = document.createElement('input');
+// const addBtn = document.createElement('button');
+// addBtn.innerText = 'ADD';
+// const removeBtn = document.createElement('button');
+// removeBtn.innerText = 'REMOVE';
+
+// document.body.append(addBtn, inputList, removeBtn, markList);
+
+// addBtn.addEventListener('click', () => {
+//   const markItem = document.createElement('li');
+//   markItem.textContent = inputList.value ? inputList.value : 'defolt value';
+//   markList.append(markItem)
+//   let iven = markList.children.length % 2 === 0;
+//   markItem.style.backgroundColor = iven ? 'red' : 'blue';
+//   inputList.value = '';
+// });
+// removeBtn.addEventListener('click', () => {
+//   if (markList.children.length === 0) {
+//     return;
+//   }
+//   markList.lastElementChild.remove();
+// });
+
+
