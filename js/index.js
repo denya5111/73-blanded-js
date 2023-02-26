@@ -752,42 +752,57 @@
 // - Форма щоразу повинна з'являтися у різних місцях на сторінці
 // - Колір форми в рандомному порядку змінюється,
 
-const forms = [
-  'width: 100px; height: 100px; border-width: 1px; border-color: #000000',
-  'width: 100px; height: 100px; border-radius: 50%; border-width: 1px; border-color: #000000',
-  'width: 150px; height: 100px; border-width: 1px; border-color: #000000',
-  'width: 200px; height: 100px; border-radius: 100px / 50px;',
-  'width: 150px; height: 100px; transform: skew(20deg);',
-];
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+// const forms = [
+//   'width: 100px; height: 100px; border-width: 1px; border-color: #000000',
+//   'width: 100px; height: 100px; border-radius: 50%; border-width: 1px; border-color: #000000',
+//   'width: 150px; height: 100px; border-width: 1px; border-color: #000000',
+//   'width: 200px; height: 100px; border-radius: 100px / 50px;',
+//   'width: 150px; height: 100px; transform: skew(20deg);',
+// ];
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
 
-const randomither = max => {
-  return Math.floor(Math.random() * max);
-};
+// const randomither = max => {
+//   return Math.floor(Math.random() * max);
+// };
 
-const container = document.createElement('div');
-container.style.padding = '10px';
-const randomFigure = document.createElement('div');
+// const container = document.createElement('div');
+// container.style.padding = '10px';
+// const randomFigure = document.createElement('div');
 
-container.append(randomFigure);
+// container.append(randomFigure);
 
-randomFigure.style.cssText = forms[0];
-randomFigure.style.backgroundColor = getRandomHexColor();
-document.body.append(container);
+// randomFigure.style.cssText = forms[0];
+// randomFigure.style.backgroundColor = getRandomHexColor();
+// document.body.append(container);
 
-function handlerMouseoverRandomFigure() {
-  let top = 100 - (randomFigure.clientHeight * 100) / document.documentElement.clientHeight;
-  let left = 100 - (randomFigure.clientWidth * 100) / document.documentElement.clientWidth;
-  randomFigure.setAttribute(
-    'style',
-    ` background-color: ${getRandomHexColor()}; ${forms[randomither(forms.length)]} `
-  );
-  container.setAttribute(
-    'style',
-    `position: absolute; top: ${randomither(top)}%; left: ${randomither(left)}%; padding: 50px;`
-  );
-}
+// function handlerMouseoverRandomFigure() {
+//   let top = 100 - (randomFigure.clientHeight * 100) / document.documentElement.clientHeight;
+//   let left = 100 - (randomFigure.clientWidth * 100) / document.documentElement.clientWidth;
+//   randomFigure.setAttribute(
+//     'style',
+//     ` background-color: ${getRandomHexColor()}; ${forms[randomither(forms.length)]} `
+//   );
+//   container.setAttribute(
+//     'style',
+//     `position: absolute; top: ${randomither(top)}%; left: ${randomither(left)}%; padding: 50px;`
+//   );
+// }
 
-container.addEventListener('mouseover', handlerMouseoverRandomFigure);
+// container.addEventListener('mouseover', handlerMouseoverRandomFigure);
+
+const allItems = document.querySelector('.js-accordion-list');
+console.log(allItems);
+allItems.addEventListener('click', (e) => {
+  const isActive = allItems.querySelector('.active');
+  if (isActive === e.target.nextElementSibling) {
+    isActive.classList.toggle('active');
+    return;
+  }
+  if (isActive) {
+    isActive.classList.remove('active');
+  }
+
+  e.target.nextElementSibling.classList.toggle('active');
+})
