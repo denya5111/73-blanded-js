@@ -792,17 +792,34 @@
 
 // container.addEventListener('mouseover', handlerMouseoverRandomFigure);
 
-const allItems = document.querySelector('.js-accordion-list');
-console.log(allItems);
-allItems.addEventListener('click', (e) => {
-  const isActive = allItems.querySelector('.active');
-  if (isActive === e.target.nextElementSibling) {
-    isActive.classList.toggle('active');
+// const allItems = document.querySelector('.js-accordion-list');
+// console.log(allItems);
+// allItems.addEventListener('click', (e) => {
+//   const isActive = allItems.querySelector('.active');
+//   if (isActive === e.target.nextElementSibling) {
+//     isActive.classList.toggle('active');
+//     return;
+//   }
+//   if (isActive) {
+//     isActive.classList.remove('active');
+//   }
+
+//   e.target.nextElementSibling.classList.toggle('active');
+// })
+
+const panelList = document.querySelector('.panels');
+
+panelList.addEventListener('click', event => {
+  const isActive = panelList.querySelector('.is-open');
+
+  if (isActive === event.target.nextElementSibling) {
+    isActive.classList.toggle('is-open');
     return;
   }
   if (isActive) {
-    isActive.classList.remove('active');
+    isActive.classList.remove('is-open');
   }
 
-  e.target.nextElementSibling.classList.toggle('active');
-})
+  const item = event.target.closest('.panel');
+  item.classList.toggle('is-open');
+});
